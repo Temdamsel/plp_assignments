@@ -1,4 +1,3 @@
-
 :root {
   --primary: rgb(29, 221, 189);
   --bgDark: rgb(12, 12, 12);
@@ -181,11 +180,8 @@ section.services {
   background: white;
 }
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat (3, 1fr);
-  grid-template-rows: 1fr;
-  gap: 10px
-  /*column-gap: 2 rem;*/
+  display: flex;
+  gap: 10px;
 }
 section.services .card-grid .card {
   background: var(--white);
@@ -219,4 +215,10 @@ section.services .card-grid .card:hover h2 {
 }
 section.services .card-grid .card:hover p {
   color: var(--white);
+}
+
+@media only screen and (max-width: 768px) {
+  .card-grid {
+    flex-wrap: wrap;
+  }
 }
